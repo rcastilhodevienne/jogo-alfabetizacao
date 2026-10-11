@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-PT">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Palavras Mágicas</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Biblioteca de Confetes para comemoração -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body>
+    <div class="game-container">
+        <header class="top-bar">
+            <div class="estrelas">⭐ <span id="pontuacao">0</span></div>
+            <select id="nivel" onchange="mudarNivel()">
+                <option value="1">🟢 Fácil (3-4 letras)</option>
+                <option value="2">🟡 Médio (5-6 letras)</option>
+                <option value="3">🔴 Difícil (7+ letras)</option>
+            </select>
+        </header>
+
+        <div class="area-imagem">
+            <div id="emoji-display">❓</div>
+        </div>
+
+        <div class="area-palavra" id="slots-palavra">
+            <!-- As caixas vazias da palavra aparecerão aqui -->
+        </div>
+
+        <div class="area-letras" id="letras-embaralhadas">
+            <!-- Os botões com as letras aparecerão aqui -->
+        </div>
+        
+        <button id="btn-proximo" class="escondido" onclick="iniciarRodada()">Próxima Palavra ➡️</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
